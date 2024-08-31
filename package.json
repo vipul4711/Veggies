@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "20.10.0"
+  },
   "name": "veggies",
   "version": "1.0.0",
   "description": "6 Pck Programmer",
@@ -6,8 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
-    "dev": "nodemon backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    "dev": "nodemon backend/server.js"
   },
   "author": "",
   "license": "ISC",
