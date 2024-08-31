@@ -2,7 +2,7 @@
 
 Hi! My name is **Vipul Lotake**, I have created this website to increase customer base of my clint and make online platform to grow business.
 
-# Install Dependencies
+# Install Dependency
 
 **For Backend** - `npm i`
 
