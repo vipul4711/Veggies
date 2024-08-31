@@ -1,0 +1,32 @@
+.footer {
+  background-color: #86c232; /* Fresh greens background color */
+  color: #ffffff; /* White text color */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links li {
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f0f0f0; /* Lighter shade on hover */
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

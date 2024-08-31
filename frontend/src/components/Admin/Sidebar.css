@@ -1,0 +1,68 @@
+.sidebar {
+  background-color: #f4f9f4; /* Light green background for a fresh look */
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-radius: 10px; /* Rounded corners for a modern look */
+}
+
+.sidebar > a:first-child {
+  padding: 0;
+}
+.sidebar > a > img {
+  width: 80%;
+  margin: 0 auto;
+  transition: all 0.5s;
+  border-radius: 50%; /* Circular logo */
+}
+
+.sidebar > a > img:hover {
+  filter: drop-shadow(0 0 10px #ff6347); /* Tomato color for hover effect */
+}
+.sidebar a {
+  text-decoration: none;
+  color: #333; /* Darker text for better readability */
+  font: 200 1rem "Roboto";
+  padding: 1.5rem 2rem; /* Adjusted padding for better spacing */
+  transition: all 0.5s;
+  margin: 0.5rem 1rem; /* Margin for better spacing between links */
+  border-radius: 5px; /* Slightly rounded links */
+}
+.sidebar a:hover {
+  color: #ff6347; /* Tomato color on hover */
+  background-color: #f0f0f0; /* Light background on hover */
+  transform: scale(1.05); /* Subtle scale effect */
+}
+
+.sidebar a > p {
+  display: flex;
+  align-items: center;
+}
+.sidebar a > p > svg {
+  margin-right: 0.5rem;
+  color: #ff6347; /* Tomato color for icons */
+}
+
+.MuiTypography-root {
+  background-color: #f4f9f4 !important; /* Match the sidebar background */
+  padding: 0.5rem 1rem;
+  border-radius: 5px; /* Rounded corners for a cohesive look */
+  color: #333 !important; /* Darker text color */
+}
+
+.MuiTreeItem-root {
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+  border-left: 2px solid #ff6347; /* Tomato color for left border */
+}
+
+.MuiTreeItem-label {
+  font: 200 1rem "Roboto";
+  color: #333;
+  transition: all 0.3s;
+}
+
+.MuiTreeItem-label:hover {
+  color: #ff6347; /* Tomato color on hover */
+}

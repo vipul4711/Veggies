@@ -1,0 +1,12 @@
+.star-rating {
+  display: flex;
+}
+
+.star {
+  font-size: 25px;
+  color: rgba(20, 20, 20, 0.1);
+}
+
+.star.filled {
+  color: tomato;
+}

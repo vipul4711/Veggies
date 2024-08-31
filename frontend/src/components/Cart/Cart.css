@@ -1,0 +1,256 @@
+/* General Styles for All Screens */
+.cartPage {
+  padding: 4vmax;
+  margin-top: 70px;
+  background-color: #f9f9f9;
+}
+
+button {
+  all: unset;
+}
+
+.cartContainer {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 1vmax;
+  align-items: center;
+  margin-bottom: 2vmax;
+  background-color: white;
+  padding: 1vmax;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cartInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartInput > button {
+  all: unset; /* Reset any external styles */
+  background-color: #f0f0f0;
+  padding: 0.7vmax;
+  cursor: pointer;
+  color: #333;
+  border: none;
+  font-size: 1.5vmax;
+  border-radius: 5px;
+}
+
+.cartInput > input {
+  border: none;
+  text-align: center;
+  font-size: 1.5vmax;
+  width: 3vmax;
+  margin: 0 0.5vmax;
+}
+
+.cartSubtotal {
+  font: 600 1.5vmax "Roboto";
+  color: #333;
+  text-align: right;
+}
+
+.cartGrossTotal {
+  margin-top: 2vmax;
+  padding: 2vmax;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cartGrossTotalBox {
+  display: flex;
+  justify-content: space-between;
+  font: 600 2vmax "Roboto";
+  color: #333;
+}
+
+.noOfItem {
+  margin-top: 1vmax;
+  font: 400 1.5vmax "Roboto";
+  color: #666;
+}
+
+.checkOutBtn {
+  margin-top: 2vmax;
+  display: flex;
+  justify-content: center;
+}
+
+.checkOutBtn > button {
+  all: unset; /* Reset any external styles */
+  background-color: #ffcc00;
+  color: #333;
+  padding: 1.5vmax 3vmax;
+  font: 600 2vmax "Roboto";
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  width: 100%;
+}
+
+/* Styles for Laptop/Desktop Screens */
+@media screen and (min-width: 1024px) {
+  .cartPage {
+    padding: 4vmax;
+    margin-top: 80px;
+  }
+
+  .cartContainer {
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 2vmax;
+  }
+
+  .cartInput > button {
+    all: unset; /* Reset any external styles */
+    padding: 0.8vmax;
+    font-size: 1.2vmax;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    color: #333;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .cartInput > input {
+    font-size: 1.2vmax;
+    width: 4vmax;
+  }
+
+  .cartSubtotal {
+    font-size: 1.2vmax;
+  }
+
+  .cartGrossTotal {
+    padding: 3vmax;
+  }
+
+  .cartGrossTotalBox {
+    font-size: 2vmax;
+  }
+
+  .noOfItem {
+    font-size: 1.2vmax;
+  }
+
+  .checkOutBtn > button {
+    all: unset; /* Reset any external styles */
+    padding: 1.5vmax 3vmax;
+    font-size: 1.8vmax;
+    background-color: #ffcc00;
+    color: #333;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+  }
+}
+
+/* Styles for Mobile Screens */
+@media screen and (max-width: 600px) {
+  .cartPage {
+    padding: 2vmax;
+    margin-top: 60px;
+  }
+
+  .cartContainer {
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 1vmax;
+  }
+
+  .cartInput > button {
+    all: unset; /* Reset any external styles */
+    padding: 0.5vmax;
+    font-size: 1.2vmax;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    color: #333;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .cartInput > input {
+    font-size: 1.2vmax;
+    width: 4vmax;
+  }
+
+  .cartSubtotal {
+    font-size: 1.2vmax;
+  }
+
+  .cartGrossTotalBox {
+    font-size: 1.8vmax;
+  }
+
+  .noOfItem {
+    font-size: 1.3vmax;
+  }
+
+  .checkOutBtn > button {
+    all: unset; /* Reset any external styles */
+    padding: 1.2vmax 2.5vmax;
+    font-size: 1.8vmax;
+    background-color: #ffcc00;
+    color: #333;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+  }
+}
+
+/* Additional Styles for Smaller Mobile Screens (480px and below) */
+@media screen and (max-width: 480px) {
+  .cartPage {
+    padding: 1.5vmax;
+    margin-top: 60px;
+  }
+
+  .cartContainer {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .cartInput > button {
+    all: unset; /* Reset any external styles */
+    padding: 0.5vmax;
+    font-size: 1.2vmax;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    color: #333;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .cartInput > input {
+    font-size: 1.2vmax;
+    width: 3.5vmax;
+  }
+
+  .cartSubtotal {
+    font-size: 1.2vmax;
+  }
+
+  .cartGrossTotalBox {
+    font-size: 1.6vmax;
+  }
+
+  .noOfItem {
+    font-size: 1.2vmax;
+  }
+
+  .checkOutBtn > button {
+    all: unset; /* Reset any external styles */
+    padding: 1vmax 2vmax;
+    font-size: 1.6vmax;
+    background-color: #ffcc00;
+    color: #333;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+  }
+}

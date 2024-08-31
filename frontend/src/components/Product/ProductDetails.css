@@ -1,0 +1,155 @@
+/* Main Container */
+.ProductDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 2vmax;
+  gap: 1vmax;
+}
+
+/* Image Gallery */
+.ImageGallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MainImage {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1vmax;
+}
+
+.ThumbnailContainer {
+  display: flex;
+  gap: 0.5vmax;
+  overflow-x: auto;
+}
+
+.Thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border 0.3s;
+  border: 2px solid transparent;
+}
+
+.Thumbnail.Active {
+  border: 2px solid #007bff;
+}
+
+/* Product Info Section */
+.ProductInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1vmax;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ProductName {
+  font-size: 2vmax;
+  color: #333;
+  margin: 0.5vmax 0;
+}
+
+.PriceSection {
+  display: flex;
+  gap: 0.5vmax;
+  align-items: center;
+}
+
+.CurrentPrice {
+  font-size: 2.5vmax;
+  color: #d9534f;
+}
+
+.OriginalPrice {
+  font-size: 1.5vmax;
+  color: #6c757d;
+  text-decoration: line-through;
+}
+
+/* Quantity Control */
+.QuantityControl {
+  display: flex;
+  align-items: center;
+  margin: 1vmax 0;
+}
+
+.QtyButton {
+  border: none;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 0.5vmax;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.5vmax;
+}
+
+.QtyInput {
+  width: 2.5vmax;
+  text-align: center;
+  border: none;
+  margin: 0 0.5vmax;
+}
+
+/* Stock Status */
+.StockStatus {
+  font-size: 1.5vmax;
+  margin-top: 0.5vmax;
+}
+
+.InStock {
+  color: #28a745;
+}
+
+.OutOfStock {
+  color: #dc3545;
+}
+
+/* Add to Cart Button */
+.AddToCartButton {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 0.8vmax 1.5vmax;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1vmax;
+  font-size: 1.8vmax;
+}
+
+.AddToCartButton:hover {
+  background-color: #218838;
+}
+
+/* Product Description */
+.ProductDescription {
+  font-size: 1.3vmax;
+  color: #555;
+  margin-top: 1vmax;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  .ProductDetails {
+    flex-direction: row;
+  }
+
+  .ImageGallery {
+    flex: 1;
+    margin-right: 2vmax;
+  }
+
+  .ProductInfo {
+    flex: 1;
+    align-items: flex-start;
+  }
+}

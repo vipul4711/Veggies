@@ -1,0 +1,201 @@
+/* Ensure content does not go under the fixed header */
+.content {
+  margin-top: 80px; /* Adjust this value to match your header height */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Product Header */
+.product-header {
+  margin: 20px 0;
+}
+
+.product-header h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Product Card Styling */
+.product-card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.2s ease-in-out;
+  margin: 0 auto; /* Center the card */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Add to Cart and Quantity Controls */
+.product-card .add-to-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e0e0e0;
+}
+
+.add-to-cart button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-to-cart button:hover {
+  background-color: #218838;
+}
+
+.add-to-cart .quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-input {
+  text-align: center;
+  width: 40px;
+}
+
+/* Pagination Box */
+.paginationBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  position: relative;
+  z-index: 1; /* Ensure it's on top of other elements */
+}
+
+/* Reset Pagination Styles */
+.paginationBox .MuiPagination-root,
+.paginationBox .MuiPaginationItem-root,
+.paginationBox .MuiPagination-ul {
+  all: unset; /* Resets most styles (like padding, margin, background, etc.) */
+  display: flex; /* Reapply display properties */
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Apply Custom Pagination Styles */
+.paginationBox .MuiPaginationItem-root {
+  color: #333; /* Ensure text color */
+  font-size: 1rem; /* Adjust font size */
+  border-radius: 50%;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.paginationBox .Mui-selected {
+  background-color: #28a745; /* Selected page color */
+  color: white;
+}
+
+.paginationBox .MuiPaginationItem-root:hover {
+  background-color: #218838; /* Hover background color */
+  color: white;
+}
+
+.paginationBox .MuiPaginationItem-ellipsis {
+  color: #999; /* Ellipsis color */
+}
+
+/* Additional Reset for Pagination UL */
+.paginationBox .MuiPagination-ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* Mobile-First Approach */
+
+/* Ensure the grid layout does not overflow on small screens */
+.row.g-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Ensure columns take full width on smaller screens */
+.col-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Mobile Specific Styling */
+@media screen and (max-width: 768px) {
+  .product-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .product-card {
+    width: 100%; /* Ensure card takes full width on mobile */
+    padding: 10px;
+  }
+
+  .add-to-cart button {
+    padding: 5px 8px;
+  }
+
+  /* Adjusting the grid for mobile screens to avoid overflow */
+  .row.g-3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0; /* Remove gap between rows on mobile */
+  }
+
+  .col-6 {
+    flex: 0 0 50%; /* Make each card take half width */
+  }
+
+  /* Pagination should be centered and spaced on mobile */
+  .paginationBox {
+    margin-top: 10px;
+    padding: 5px;
+    flex-wrap: wrap; /* Allow pagination items to wrap */
+  }
+
+  .paginationBox .MuiPagination-ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Ensure pagination fits within the viewport width */
+  }
+
+  .paginationBox .MuiPaginationItem-root {
+    margin: 0 5px; /* Add some spacing between pagination items */
+    padding: 6px 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 480px) {
+  .product-card {
+    padding: 8px;
+  }
+
+  .add-to-cart button {
+    padding: 4px 6px;
+  }
+
+  .paginationBox {
+    margin-top: 8px;
+    padding: 4px;
+    flex-direction: column; /* Stack pagination vertically on small screens */
+  }
+
+  .paginationBox .MuiPagination-ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .paginationBox .MuiPaginationItem-root {
+    margin: 5px 2px; /* Adjust margin for better spacing */
+    padding: 6px 10px;
+  }
+}

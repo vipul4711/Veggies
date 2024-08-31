@@ -1,0 +1,162 @@
+/* Profile Container */
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-top: 50px;
+  box-sizing: border-box; /* Ensure padding is included in total height/width */
+}
+
+/* Profile Header */
+.profileHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profileHeader > h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.editProfileLink,
+.dashboardLink {
+  border: none;
+  background-color: #ff5722;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin: 5px;
+}
+
+.editProfileLink:hover,
+.dashboardLink:hover {
+  background-color: #e64a19;
+}
+
+/* Profile Details */
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.detailItem {
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.detailItem > h4 {
+  color: #555;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.detailItem > p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Links Section */
+.linksSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Added margin-bottom for spacing */
+}
+
+.linksSection > a,
+.logoutButton {
+  border: none;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.linksSection > a:hover,
+.logoutButton:hover {
+  background-color: #222;
+}
+
+/* Logout Button */
+.linksSection .logoutButton {
+  border: none !important;
+  padding: 10px 20px !important;
+  background-color: #ff5722 !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 5px !important;
+  transition: background-color 0.3s !important;
+  margin-top: 20px !important; /* Adjusted margin-top to ensure spacing below the content */
+  align-self: center !important; /* Center the button horizontally */
+  cursor: pointer !important;
+}
+
+.linksSection .logoutButton:hover {
+  background-color: #e64a19 !important;
+}
+
+/* Additional defensive styles to block external overrides */
+.linksSection .logoutButton,
+.linksSection .logoutButton * {
+  all: initial; /* Resets all inherited or external styles */
+  display: inline-block;
+  border: none;
+  background-color: #ff5722;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.linksSection .logoutButton:hover {
+  background-color: #e64a19;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .profileHeader > h1 {
+    font-size: 1.8rem;
+  }
+
+  .editProfileLink,
+  .dashboardLink {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .profileDetails {
+    margin-bottom: 10px;
+  }
+
+  .detailItem {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .linksSection > a,
+  .logoutButton {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,142 @@
+/* Reset default margin and scroll behavior for smoother UX */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Typography improvements */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9; /* Light background for better readability */
+  color: #333; /* Darker text color for readability */
+}
+
+/* Input Field Styles */
+/* Remove arrows for number inputs in Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove spinner for number inputs in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Global color utilities */
+.greenColor {
+  color: #3f704d; /* Consistent shade of green */
+}
+
+.redColor {
+  color: #ff4f4f; /* Use a consistent red shade */
+}
+
+/* Header and Footer Styling */
+header,
+footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Keep both header and footer on top */
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+header {
+  top: 0; /* Header stays at the top */
+  height: 60px; /* Set consistent height */
+}
+
+footer {
+  bottom: 0; /* Footer stays at the bottom */
+  height: 40px; /* Set consistent height */
+}
+
+/* Main content padding to avoid being overlapped by fixed header and footer */
+main {
+  padding-top: 60px; /* Matches header height */
+  padding-bottom: 40px; /* Matches footer height */
+}
+
+/* Button styling - ensure all buttons have consistent looks */
+button {
+  background-color: #3f704d; /* Consistent button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2e5234; /* Darker shade on hover */
+}
+
+/* Link styling - ensure links are easily identifiable */
+a {
+  color: #3f704d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2e5234;
+}
+
+/* Utility classes for text alignment and margin */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* Responsive Image Styles */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive Design Tweaks */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Slightly smaller font size for smaller screens */
+  }
+
+  header {
+    height: 50px;
+  }
+
+  footer {
+    height: 30px;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 50px; /* Smaller top padding for mobile screens */
+    padding-bottom: 30px; /* Smaller bottom padding for mobile screens */
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,34 @@
+/* Hide the stepper line */
+.MuiStepper-root.MuiStepper-horizontal.MuiStepper-alternativeLabel.css-10mg1vw-MuiStepper-root {
+  margin-top: 80px;
+}
+
+.MuiStepConnector-line {
+  display: none !important;
+}
+
+.MuiStepConnector-root {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.349);
+}
+
+.MuiStepConnector-active,
+.MuiStepConnector-completed {
+  background-color: tomato;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .MuiStepLabel-label {
+    font-size: 0.75rem; /* Smaller font on mobile */
+  }
+
+  .MuiStepIcon-root {
+    font-size: 1.5rem; /* Smaller icons on mobile */
+  }
+
+  /* Optionally hide text labels on very small screens */
+  .MuiStepLabel-label.Mui-disabled {
+    display: none;
+  }
+}
