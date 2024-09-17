@@ -14,11 +14,10 @@ const Profile = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (isAuthenticated === undefined) {
-      dispatch(logout());
+    if (isAuthenticated === false) {
       navigate("/login");
     }
-  }, [isAuthenticated, loading, navigate]);
+  }, [isAuthenticated, navigate]);
 
   const handleLogout = () => {
     dispatch(logout());

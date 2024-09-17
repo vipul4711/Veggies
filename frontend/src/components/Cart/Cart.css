@@ -254,3 +254,74 @@ button {
     width: 100%;
   }
 }
+
+/* Styles for Empty Cart */
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 2vmax;
+  margin-top: 15%;
+}
+
+.emptyCart svg {
+  font-size: 6vmax;
+  color: #ffcc00;
+  margin-bottom: 1vmax;
+}
+
+.emptyCart p {
+  font: 600 1.8vmax "Roboto";
+  color: #333;
+  margin-bottom: 1vmax;
+}
+
+.emptyCart a {
+  all: unset;
+  background-color: #ffcc00;
+  color: #333;
+  padding: 1vmax 2vmax;
+  font: 600 1.5vmax "Roboto";
+  cursor: pointer;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.emptyCart a:hover {
+  background-color: #e6b800;
+}
+
+/* Mobile and Smaller Screen Styles for Empty Cart */
+@media screen and (max-width: 600px) {
+  .emptyCart svg {
+    font-size: 8vmax;
+  }
+
+  .emptyCart p {
+    font-size: 1.6vmax;
+  }
+
+  .emptyCart a {
+    font-size: 1.4vmax;
+    padding: 0.8vmax 1.8vmax;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .emptyCart svg {
+    font-size: 10vmax;
+  }
+
+  .emptyCart p {
+    font-size: 1.4vmax;
+  }
+
+  .emptyCart a {
+    font-size: 1.3vmax;
+    padding: 0.7vmax 1.6vmax;
+  }
+}

@@ -48,10 +48,12 @@ function App() {
       },
     });
 
-    if (isAuthenticated === true) {
+    // Check if token exists in localStorage
+    const token = localStorage.getItem("token");
+    if (token) {
       dispatch(loadUser());
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

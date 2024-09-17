@@ -81,7 +81,9 @@ const ProductDetails = () => {
           <h2 className="ProductName">{product.name}</h2>
           <div className="PriceSection">
             <span className="CurrentPrice">₹{product.price}</span>
-            <span className="OriginalPrice">₹{product.originalPrice}</span>
+          </div>
+          <div className="UnitSection">
+            <span className="product-unit">{product.unit}</span>
           </div>
 
           {/* Quantity Control */}
