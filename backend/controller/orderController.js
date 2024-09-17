@@ -85,20 +85,26 @@ exports.updateOrder = catchAsynErrors(async (req, res, next) => {
   if (!order) {
     return next(new ErrorHandler("Order not found with this Id", 404));
   }
+
   if (order.orderStatus === "Delivered") {
     return next(new ErrorHandler("You have already delivered this order", 400));
   }
 
   order.orderStatus = req.body.status;
 
+  // If order is shipped, update stock
   if (req.body.status === "Shipped") {
     order.orderItems.forEach(async (o) => {
       await updateStock(o.product, o.quantity);
     });
   }
 
+  // If order is delivered, set deliveredAt and update payment status to succeeded
   if (req.body.status === "Delivered") {
     order.deliveredAt = Date.now();
+
+    // Update payment status to succeeded if delivered
+    order.paymentInfo.status = "succeeded";
   }
 
   await order.save({ validateBeforeSave: false });

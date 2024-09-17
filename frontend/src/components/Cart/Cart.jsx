@@ -37,6 +37,17 @@ const Cart = () => {
   };
 
   const checkoutHandler = () => {
+    const grossTotal = cartItems.reduce(
+      (acc, item) => acc + item.quantity * item.price,
+      0
+    );
+
+    if (grossTotal < 250) {
+      // Show alert if the gross total is less than ₹250
+      alert("Minimum cart amount is ₹250. Please add more items to proceed.");
+      return;
+    }
+
     if (isAuthenticated) {
       navigate("/shipping");
     } else {
@@ -85,6 +96,17 @@ const Cart = () => {
                   }`}</p>
                 </div>
               ))}
+
+            {/* Alert for Minimum Cart Amount */}
+            {cartItems.reduce(
+              (acc, item) => acc + item.quantity * item.price,
+              0
+            ) < 250 && (
+              <div className="alert alert-danger" role="alert">
+                Minimum Cart Amount should be ₹250 to proceed to checkout.
+              </div>
+            )}
+
             <div className="cartGrossTotal">
               <div></div>
               <div className="cartGrossTotalBox">
@@ -95,9 +117,19 @@ const Cart = () => {
                 )}`}</p>
               </div>
               <div></div>
-              <div className="noOfItem">Total items :{cartItems.length}</div>
+              <div className="noOfItem">Total items: {cartItems.length}</div>
               <div className="checkOutBtn">
-                <button onClick={checkoutHandler}>Checkout</button>
+                <button
+                  onClick={checkoutHandler}
+                  disabled={
+                    cartItems.reduce(
+                      (acc, item) => acc + item.quantity * item.price,
+                      0
+                    ) < 250
+                  }
+                >
+                  Checkout
+                </button>
               </div>
             </div>
           </div>

@@ -22,8 +22,8 @@ const ConfirmOrder = () => {
     0
   );
 
-  const shippingCharges = subtotal > 1000 ? 0 : 200;
-  const tax = Math.round(subtotal * 0.18);
+  const shippingCharges = 0;
+  const tax = 0;
   const totalPrice = subtotal + tax + shippingCharges;
   const address = `${shippingInfo.address}, ${shippingInfo.city}, ${shippingInfo.state}, ${shippingInfo.pinCode}, ${shippingInfo.country}`;
 

@@ -93,6 +93,22 @@ button {
   width: 100%;
 }
 
+.checkOutBtn > button:disabled {
+  background-color: #cccccc; /* Disable button style */
+  cursor: not-allowed;
+}
+
+/* Bootstrap Alert Styles */
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1vmax;
+  margin-top: 1vmax;
+  border-radius: 10px;
+  text-align: center;
+  font: 600 1.5vmax "Roboto";
+}
+
 /* Styles for Laptop/Desktop Screens */
 @media screen and (min-width: 1024px) {
   .cartPage {
@@ -106,14 +122,9 @@ button {
   }
 
   .cartInput > button {
-    all: unset; /* Reset any external styles */
     padding: 0.8vmax;
     font-size: 1.2vmax;
     background-color: #f0f0f0;
-    cursor: pointer;
-    color: #333;
-    border-radius: 5px;
-    border: none;
   }
 
   .cartInput > input {
@@ -138,15 +149,8 @@ button {
   }
 
   .checkOutBtn > button {
-    all: unset; /* Reset any external styles */
     padding: 1.5vmax 3vmax;
     font-size: 1.8vmax;
-    background-color: #ffcc00;
-    color: #333;
-    cursor: pointer;
-    border-radius: 30px;
-    border: none;
-    width: 100%;
   }
 }
 
@@ -163,14 +167,8 @@ button {
   }
 
   .cartInput > button {
-    all: unset; /* Reset any external styles */
     padding: 0.5vmax;
     font-size: 1.2vmax;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    color: #333;
-    border-radius: 5px;
-    border: none;
   }
 
   .cartInput > input {
@@ -186,142 +184,35 @@ button {
     font-size: 1.8vmax;
   }
 
-  .noOfItem {
-    font-size: 1.3vmax;
-  }
-
   .checkOutBtn > button {
-    all: unset; /* Reset any external styles */
-    padding: 1.2vmax 2.5vmax;
-    font-size: 1.8vmax;
-    background-color: #ffcc00;
-    color: #333;
-    cursor: pointer;
-    border-radius: 30px;
-    border: none;
-    width: 100%;
+    padding: 1.2vmax;
+    font-size: 1.4vmax;
   }
 }
 
-/* Additional Styles for Smaller Mobile Screens (480px and below) */
-@media screen and (max-width: 480px) {
-  .cartPage {
-    padding: 1.5vmax;
-    margin-top: 60px;
-  }
-
-  .cartContainer {
-    grid-template-columns: 1fr 2fr 1fr;
-  }
-
-  .cartInput > button {
-    all: unset; /* Reset any external styles */
-    padding: 0.5vmax;
-    font-size: 1.2vmax;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    color: #333;
-    border-radius: 5px;
-    border: none;
-  }
-
-  .cartInput > input {
-    font-size: 1.2vmax;
-    width: 3.5vmax;
-  }
-
-  .cartSubtotal {
-    font-size: 1.2vmax;
-  }
-
-  .cartGrossTotalBox {
-    font-size: 1.6vmax;
-  }
-
-  .noOfItem {
-    font-size: 1.2vmax;
-  }
-
-  .checkOutBtn > button {
-    all: unset; /* Reset any external styles */
-    padding: 1vmax 2vmax;
-    font-size: 1.6vmax;
-    background-color: #ffcc00;
-    color: #333;
-    cursor: pointer;
-    border-radius: 30px;
-    border: none;
-    width: 100%;
-  }
-}
-
-/* Styles for Empty Cart */
 .emptyCart {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 50vh;
-  text-align: center;
-  background-color: #f9f9f9;
-  padding: 2vmax;
-  margin-top: 15%;
+  align-items: center;
+  height: 70vh;
 }
 
-.emptyCart svg {
-  font-size: 6vmax;
-  color: #ffcc00;
-  margin-bottom: 1vmax;
+.emptyCart > svg {
+  font-size: 10vmax;
+  color: tomato;
 }
 
-.emptyCart p {
-  font: 600 1.8vmax "Roboto";
-  color: #333;
-  margin-bottom: 1vmax;
+.emptyCart > p {
+  font: 300 1.5vmax "Roboto";
+  color: rgba(0, 0, 0, 0.678);
 }
 
-.emptyCart a {
-  all: unset;
-  background-color: #ffcc00;
-  color: #333;
-  padding: 1vmax 2vmax;
-  font: 600 1.5vmax "Roboto";
-  cursor: pointer;
-  border-radius: 30px;
+.emptyCart > a {
+  background-color: rgba(40, 40, 40, 0.815);
+  color: white;
+  font: 300 1vmax "Roboto";
+  padding: 0.5vmax 1vmax;
+  margin: 1vmax;
   text-decoration: none;
-}
-
-.emptyCart a:hover {
-  background-color: #e6b800;
-}
-
-/* Mobile and Smaller Screen Styles for Empty Cart */
-@media screen and (max-width: 600px) {
-  .emptyCart svg {
-    font-size: 8vmax;
-  }
-
-  .emptyCart p {
-    font-size: 1.6vmax;
-  }
-
-  .emptyCart a {
-    font-size: 1.4vmax;
-    padding: 0.8vmax 1.8vmax;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .emptyCart svg {
-    font-size: 10vmax;
-  }
-
-  .emptyCart p {
-    font-size: 1.4vmax;
-  }
-
-  .emptyCart a {
-    font-size: 1.3vmax;
-    padding: 0.7vmax 1.6vmax;
-  }
 }

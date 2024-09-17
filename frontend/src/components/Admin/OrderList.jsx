@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { Box, Typography, Card, CardContent, Button } from "@mui/material";
@@ -21,6 +21,38 @@ const OrderList = () => {
   const { error, orders } = useSelector((state) => state.allOrders);
   const { error: deleteError, isDeleted } = useSelector((state) => state.order);
 
+  const lastCheckedRef = useRef(new Date());
+
+  useEffect(() => {
+    const fetchOrders = async () => {
+      try {
+        const response = await dispatch(getAllOrders());
+        const latestOrders = response.orders; // Access orders from response
+
+        // Check if there are new orders since lastChecked
+        const hasNewOrders = latestOrders.some(
+          (order) => new Date(order.createdAt) > lastCheckedRef.current
+        );
+
+        if (hasNewOrders) {
+          alert("You have new orders!");
+        }
+
+        // Update lastChecked only after fetching orders
+        lastCheckedRef.current = new Date();
+      } catch (error) {
+        console.error("Failed to fetch orders:", error);
+      }
+    };
+
+    // Fetch orders on mount and set up polling
+    fetchOrders();
+    const intervalId = setInterval(fetchOrders, 30000); // Poll every 30 seconds
+
+    // Cleanup on component unmount
+    return () => clearInterval(intervalId);
+  }, [dispatch, error, deleteError, isDeleted, navigate]);
+
   useEffect(() => {
     if (error) {
       alert(error);
@@ -37,9 +69,7 @@ const OrderList = () => {
       navigate("/admin/orders");
       dispatch({ type: DELETE_ORDER_RESET });
     }
-
-    dispatch(getAllOrders());
-  }, [dispatch, error, deleteError, isDeleted, navigate]);
+  }, [error, deleteError, isDeleted, navigate, dispatch]);
 
   const deleteOrderHandler = (id) => {
     dispatch(deleteOrder(id));

@@ -1,0 +1,127 @@
+.orderListContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.heading {
+  font: 400 2rem "Roboto";
+  padding: 0.5vmax;
+  color: rgba(0, 0, 0, 0.637);
+  margin: 2rem;
+  text-align: center;
+}
+
+.orderCard {
+  margin: 1rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fafafa;
+}
+
+.orderStatus {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.statusDelivered {
+  color: green;
+}
+
+.statusPending {
+  color: orange;
+}
+
+.orderAmount {
+  margin-bottom: 0.5rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.orderItems {
+  margin-bottom: 1rem;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.itemName {
+  font-weight: 500;
+}
+
+.itemQty {
+  font-weight: 300;
+}
+
+.orderActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.orderDetailsButton,
+.orderDeleteButton {
+  color: rgba(0, 0, 0, 0.527);
+  transition: all 0.5s;
+}
+
+.orderDetailsButton:hover {
+  color: tomato;
+}
+
+.orderDeleteButton:hover {
+  color: rgb(236, 30, 30);
+}
+
+/* Responsive adjustments for screens up to 600px */
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .orderCard {
+    margin: 1rem;
+  }
+
+  .orderItem {
+    font-size: 2vw;
+  }
+
+  .orderActions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .orderDetailsButton,
+  .orderDeleteButton {
+    width: 100%;
+  }
+}
+
+/* Additional responsive adjustments for screens up to 480px */
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 1.25rem;
+    margin: 1rem;
+  }
+
+  .orderCard {
+    margin: 0.5rem;
+  }
+
+  .orderItem {
+    font-size: 3vw;
+  }
+
+  .orderActions {
+    gap: 0.25rem;
+  }
+}
