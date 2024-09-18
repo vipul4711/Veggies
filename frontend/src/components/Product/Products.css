@@ -5,10 +5,6 @@
   padding-right: 10px;
 }
 
-.container {
-  display: block;
-}
-
 /* Product Header */
 .product-header {
   margin: 20px 0;
@@ -128,9 +124,8 @@
 
 /* Ensure columns take full width on smaller screens */
 .col-6 {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  width: 20% !important; /* Default width for larger screens */
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Mobile Specific Styling */
@@ -156,8 +151,7 @@
   }
 
   .col-6 {
-    flex: 0 0 50%; /* Make each card take half width on smaller screens */
-    width: 50% !important;
+    flex: 0 0 50%; /* Make each card take half width */
   }
 
   /* Pagination should be centered and spaced on mobile */
@@ -187,11 +181,6 @@
 
   .add-to-cart button {
     padding: 4px 6px;
-  }
-
-  .col-6 {
-    flex: 0 0 50%; /* Ensure columns take half width on extra small screens */
-    width: 50% !important;
   }
 
   .paginationBox {
