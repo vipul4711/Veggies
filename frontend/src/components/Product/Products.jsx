@@ -52,7 +52,7 @@ const Products = () => {
         ) : (
           <Fragment>
             <div className="container mt-3">
-              <div className="row g-3">
+              <div className="row g-3 category-container">
                 {Allcategories.map((categoryObj, index) => (
                   <div key={index} className="col-6">
                     <CategoryCard
@@ -68,7 +68,7 @@ const Products = () => {
                 <h2>Exclusive Products</h2>
               </div>
 
-              <div className="row g-3">
+              <div className="row g-3 product-container">
                 {products &&
                   products.map((product) => (
                     <div key={product._id} className="col-6">
